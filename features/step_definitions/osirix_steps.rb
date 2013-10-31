@@ -57,9 +57,9 @@ Given(/^chef is setup$/) do
 end
 
 Given(/^OsiriX was already downloaded$/) do
-  dmg_filename = 'osirix.dmg'
-  FileUtils.cp(sample_dmg, File.join(file_cache_path, dmg_filename))
-  check_file_presence([File.join(file_cache_path, dmg_filename)], true)
+  dmg = File.join(file_cache_path, 'osirix.dmg')
+  FileUtils.cp(sample_dmg, dmg)
+  check_file_presence([dmg], true)
 end
 
 When(/^I run chef$/) do
