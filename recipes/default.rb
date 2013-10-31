@@ -17,6 +17,8 @@
 # limitations under the License.
 #
 
+return unless platform_family?('mac_os_x')
+
 dmg_package 'OsiriX' do
   source      node[:osirix][:source]
   checksum    node[:osirix][:checksum] if node[:osirix][:checksum]
